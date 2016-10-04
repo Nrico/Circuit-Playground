@@ -15,3 +15,4 @@ Randomized colors for each of the 10 neopixels, but the range is limited. The co
 Randomized interval for the display of pixel changes
 Randomized brigh/dim value for the individual neopixels, but it doesn't go all the way down to zero.
 Example: https://youtu.be/a-HDCh5Qw3U
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a-HDCh5Qw3U?rel=0" frameborder="0" allowfullscreen></iframe>
