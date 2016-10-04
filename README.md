@@ -7,9 +7,11 @@ RANDOM COLORS
 Randomized colors for each of the 10 neopixels
 Randomized interval for the display of pixel changes
 Randomized brigh/dim value for the individual neopixels
+Example: https://youtu.be/FmEIuwqw41s
 
 
 FLICKER FLAME
 Randomized colors for each of the 10 neopixels, but the range is limited. The color coices are limited to the red/orange range.
 Randomized interval for the display of pixel changes
 Randomized brigh/dim value for the individual neopixels, but it doesn't go all the way down to zero.
+Example: https://youtu.be/a-HDCh5Qw3U
