@@ -1,0 +1,74 @@
+// MAGIC 8 BALL
+// For the Adafruit Circuit Playground
+// Click the button near the green light. Hold it down and you get an answer for your question. "Yes" "Probably" "Maybe Not" "No"
+// Watch for a colored light and a tone
+// Enrico Trujillo
+// November 6, 2016
+
+
+#include <Adafruit_CircuitPlayground.h>
+
+bool leftButtonPressed;
+bool rightButtonPressed;
+int randomInt = 0;
+
+
+void setup() {
+
+  Serial.begin(9600);
+  CircuitPlayground.begin();
+
+}
+
+void loop() {
+  CircuitPlayground.clearPixels();
+  leftButtonPressed = CircuitPlayground.leftButton();
+  rightButtonPressed = CircuitPlayground.rightButton();
+  
+  Serial.print("Left Button: ");
+  if (leftButtonPressed) {
+    Serial.print("DOWN");
+    CircuitPlayground.setPixelColor(5, 0xFF0000);
+    CircuitPlayground.playTone(500, 100);
+  } else {
+    Serial.print("  UP");
+    CircuitPlayground.setPixelColor(7, 0x00FF00);
+  }
+  Serial.print("   Right Button: ");
+  if (rightButtonPressed) {
+    randomInt = random(0,4);
+    Serial.print(randomInt);
+    if (randomInt == 0) {
+      Serial.print("YES   ");
+      CircuitPlayground.setPixelColor(4, 0x00FF00);
+      CircuitPlayground.playTone(800, 100);
+    } else if (randomInt == 1) {
+      Serial.print("NO   ");
+      CircuitPlayground.setPixelColor(0, 255,   0,   0);
+      CircuitPlayground.playTone(400, 100);
+    } else if (randomInt == 2) {
+      Serial.print("POSSIBLY   ");
+      CircuitPlayground.setPixelColor(3, 128, 128,   0);
+      CircuitPlayground.playTone(500, 100);
+    } else if (randomInt == 3) {
+      Serial.print("UNLIKELY   ");
+      CircuitPlayground.setPixelColor(1,   0, 128, 128);
+      CircuitPlayground.playTone(700, 100);
+    }
+    Serial.print("DOWN");
+
+  } else {
+    Serial.print("  UP");   
+
+    CircuitPlayground.setPixelColor(0, 128, 128,   0);
+    CircuitPlayground.setPixelColor(1, 128, 128,   0);
+    CircuitPlayground.setPixelColor(2, 128, 128,   0);
+    CircuitPlayground.setPixelColor(3, 128, 128,   0);
+    CircuitPlayground.setPixelColor(4, 128, 128,   0);
+
+  }
+  Serial.println();
+  
+  delay(1000);
+
+}
