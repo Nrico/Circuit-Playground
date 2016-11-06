@@ -15,3 +15,8 @@ Randomized colors for each of the 10 neopixels, but the range is limited. The co
 Randomized interval for the display of pixel changes
 Randomized brigh/dim value for the individual neopixels, but it doesn't go all the way down to zero.
 Example: https://youtu.be/a-HDCh5Qw3U
+
+
+MAGIC 8 BALL
+A randomized decision maker. It takes advantage of the neopixels and buzzer on teh Circuit Playground to rougly emulate a Migic 8 Ball toy. 
+Example: https://youtu.be/mKqvI7j5CLE
